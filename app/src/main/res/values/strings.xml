@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BottomNavigationWithFragment</string>
+    <string name="dark_feature">Can reduce power usage by a significant amount (depending on the device’s screen technology).
+Improves visibility for users with low vision and those who are sensitive to bright light.
+Makes it easier for anyone to use a device in a low-light environment.</string>
+</resources>
