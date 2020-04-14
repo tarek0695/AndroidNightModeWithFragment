@@ -22,4 +22,18 @@ public class SharedPref {
         Boolean state = mSharedPref.getBoolean("NightMode", false);
         return state;
     }
+
+    //this method wiil save setting fragment state
+    public void setSettingFragment(Boolean state){
+        SharedPreferences.Editor editor = mSharedPref.edit();
+        editor.putBoolean("SettingFragment", state);
+        editor.commit();
+    }
+
+    //this method will load the setting fragment state
+    public boolean loadSettingFragment(){
+        Boolean state = mSharedPref.getBoolean("SettingFragment", false);
+        return state;
+    }
+
 }

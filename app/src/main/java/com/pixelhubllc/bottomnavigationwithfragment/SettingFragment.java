@@ -22,7 +22,7 @@ public class SettingFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_setting, container, false);
+        final View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
 
         sharedPref = new SharedPref(getContext());
@@ -43,20 +43,18 @@ public class SettingFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     sharedPref.setNightModeState(true);
-
+                    sharedPref.setSettingFragment(true);
                     getActivity().recreate();
 
                 } else {
                     sharedPref.setNightModeState(false);
-
+                    sharedPref.setSettingFragment(true);
                     getActivity().recreate();
 
                 }
             }
         });
 
-
         return view;
     }
-
 }
